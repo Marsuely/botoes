@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Botões de Frutas</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f9f9f9;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px;
+    }
+
+    h1 {
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .buttons {
+      display: flex;
+      gap: 15px;
+      margin-bottom: 30px;
+    }
+
+    button {
+      padding: 15px 25px;
+      font-size: 1em;
+      border: none;
+      border-radius: 8px;
+      background-color: #4CAF50;
+      color: white;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #45a049;
+    }
+
+    #frutaDisplay {
+      font-size: 1.5em;
+      color: #555;
+      min-height: 2em;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Clique nos botões para descobrir uma fruta</h1>
+
+  <div class="buttons">
+    <button onclick="mostrarFruta('Maçã')">Maçã</button>
+    <button onclick="mostrarFruta('Banana')">Banana</button>
+    <button onclick="mostrarFruta('Laranja')">Laranja</button>
+    <button onclick="mostrarFruta('Uva')">Uva</button>
+  </div>
+
+  <div id="frutaDisplay">Clique em um botão para ver a fruta</div>
+
+  <script>
+    function mostrarFruta(nome) {
+      document.getElementById('frutaDisplay').textContent = 'Fruta: ' + nome;
+    }
+  </script>
+
+</body>
+</html>
